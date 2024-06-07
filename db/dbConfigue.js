@@ -1,9 +1,9 @@
 const mysql2 =require ('mysql2')
 const dbconnection= mysql2.createPool({
-    user:"meley-admin",
-    database:"meley-db",
+    user:process.env.USER,
+    database:process.env.DATABASE,
     host:"localhost",
-    password:"123456",
+    password:process.env.PASSWORD,
     connectionLimit:10
 })
 
